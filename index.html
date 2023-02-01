@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<canvas></canvas>
+<script>
+    let can = document.querySelector("canvas");
+    let ctx = can.getContext("2d");
+    can.width = window.innerWidth;
+    can.height = window.innerHeight;
+    let t = 0;
+    setInterval(function(){
+        ctx.fillStyle = "#" + (t % 2 ? "000" : "fff");
+        ctx.fillRect(0, 0, can.width, can.height);
+        t++;
+    }, 10);
+</script>
